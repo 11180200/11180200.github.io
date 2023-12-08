@@ -1,39 +1,47 @@
 <div id="quiz"></div>
 <button id="submit">Get Results</button>
 <div id="results"></div>
- <script>   
+ <script>  
  
 
 var myQuestions = [
-  {
-    question: "when was drake born",
-    answers: {
-      a: '1996',
-      b: '1995',
-      c: '1998'
-    },
-    correctAnswer: 'A'
-  },
-  {
-    question: "When was Dave born ",
-    answers: {
-      a: '1999',
-      b: '1995',
-      c: '1998'
-    },
-    correctAnswer: 'c'
-  },
 
   {
-     question:  "when was central cee born ",
-      answers:  {
-      a: '1998'
-      B: '1999,
-      C:  '2000,
-     }
+    question: "when was drake born",
+    answers:     {
+      a: '1996',
+      b: '1995',
+      c: '1998',
+           },
     correctAnswer: 'a'
+
+  },
+  {
+    question: "When was Dave born",
+    answers:     {
+      a: '1999',
+      b: '1995',
+      c: '1998',
+       
+           },
+    correctAnswer: 'a'
+
+  },
+
+{
+    question: "when was central cee born",
+    answers:     {
+       a:'1998',
+  b:'1999',
+  c:'2000',
+           },
+    correctAnswer: 'a'
+
   }
-];
+
+
+  ];
+
 var quizContainer = document.getElementById('quiz');
 var resultsContainer = document.getElementById('results');
 var submitButton = document.getElementById('submit');
@@ -47,8 +55,8 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
     var output = [];
     var answers;
 
-     for(var i=0; i<questions.length; i++){     
-           answers = [];     
+     for(var i=0; i<questions.length; i++){    
+           answers = [];    
 
       for(letter in questions[i].answers){        
         answers.push(
